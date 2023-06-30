@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets\Daco_5661865.png">
     <title>GUNNER GANG!</title>
@@ -28,12 +27,22 @@
         <div class="signin-up">
             <a href="#">Sign In</a>
             <a href="#">Sign Up</a>
-            <button>
+            <button id="hamburger-button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-              </svg></button>
+                </svg>
+            </button>
         </div>
     </header>
+
+    <nav class="nav-mobile d-none">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Artwork</a></li>
+          <li><a href="#">Forums</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+    </nav>
 
     <main>
         <section class="hero">
@@ -81,6 +90,14 @@
 
 
         <!-- ARTWORK SECTION -->
+        <article id="champion-artwork">
+        <h1 class="content-header">ARTWORK CHAMPION THIS MONTH!</h1>
+        <picture>
+            <source media="(min-width:650px)" srcset="/assets/apex1.webp">
+            <img src="/assets/apex1-min.webp" alt="apex champion artwork">
+        </picture>
+        </article>
+
         <article id="artwork">
             <h1 class="content-header">LATEST POPULAR ARTWORK!</h1>
             <div class="pic-container">
@@ -99,7 +116,7 @@
                 <div class="pic5">
                     <img src="/assets/5-min.jpeg" alt="image 5">
                 </div>
-            </div>
+            </div>  
         </article>
         
         <form class="register" action="" method="post">
@@ -147,6 +164,7 @@
             <legend>Tell us your experiences as an <span>AGENT</span></legend>
 
             <label for="textarea">Tell us how skilled you are!</label>
+            <br>
             <textarea>
             </textarea>
 
@@ -180,6 +198,6 @@
         <p class="footer-text">Created by <span>Dody Hartanto</span></p>
         <p class="footer-text">Copyright &#169; 2023</p>    
     </footer>
-
+<script src="/js/main.js"></script>
 </body>
 </html>
