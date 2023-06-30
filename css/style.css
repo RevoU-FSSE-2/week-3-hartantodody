@@ -1,4 +1,435 @@
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: one-two;
+}
+
+@font-face {
+    font-family: neon-retro;
+    src: url(/week-3-hartantodody/font-face/NeonRetroDemoVersionRegular-rgPdx.otf);
+}
+
+@font-face {
+    font-family: one-two;
+    src: url(/week-3-hartantodody/font-face/OnetwohoursRegular-3zElZ.ttf);
+}
+
+html{
+    background-color: rgb(0, 0, 0);
+    scroll-behavior: smooth;
+}
+
+.content-header{
+    width : 100%;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/week-3-hartantodody/assets/abstract-background-with-red-lines.jpg);
+    background-size: cover;
+    background-position: center;    
+    font-family: one-two;
+    color: rgb(255, 81, 81);
+}
+
+
+/* NAVIGATION BAR */
+
+header{
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .icon img{
+    height: 25px;
+}
+
+header nav{
+    display: none;
+    align-items: center;
+    gap: 16px;
+}
+
+.signin-up{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+header .signin-up a{
+    display: none;
+    padding: 16px;
+    border: none;
+}
+
+header .signin-up a:nth-child(2){
+    background-color: rgb(249, 0, 0);
+    color: white;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+header button{
+    padding: 12px;
+    background-color: black;
+    border: none;
+}
+
+header nav ul a{
+    padding:16px;
+}
+
+/* MAIN CONTENT */
+
+/* HERO SECTION */
+.hero{
+    height: calc(80vh - 65px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    /* background */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://media.giphy.com/media/j8YiZa4RDxlXE4lwsP/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero h1{
+    width: 55vw;
+    font-size: 25px;
+    font-family: one-two;
+}
+
+.hero p{
+    width: 60vw;
+    font-style: italic;
+    font-family: one-two;
     
+}
+
+.hero span{
+    font-style: oblique;
+    text-shadow: 3px 3px #5d5d5d;
+    animation: fade-in-out 2s;
+    animation-iteration-count: infinite;
+    font-family: one-two;
+}
+
+.hero .red-button{
+    padding: 13px;
+    background-color: red;
+}
+
+.hero .red-button a{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* NEWS SECTION */
+
+article{
+    margin: 30px 3px;
+}
+
+article .content-header h1{
+    font-family: one-two;
+    color: rgb(255, 78, 78);
+}
+
+article .content-header p{
+    margin: 5px;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+article .article-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+figure{
+    padding: 14px;
+    width: 305px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: solid 1px rgb(96, 96, 96);
+    transition: width 0.5s, height 0.5s;
+    overflow: scroll;
+    background-color: black;
+}
+
+figure img{
+    margin: auto;
+    width: 240px;
+    height: 129px;
+    transition: width 0.5s, height 0.5s;
+}
+
+figure figcaption{
+    margin: auto;
+    width: 240px;
+    overflow:hidden;
+    font-size: 0.8rem;
+    text-align: justify;
+    color: rgb(222, 222, 222);
+}
+
+article a{
+    text-decoration: none;
+}
+
+/* YOUTUBE VIDEO SECTION */
+.yt-vid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.yt-vid iframe{
+    aspect-ratio: 16/9;
+    width: 90vw;
+    margin: 15px;
+}
+
+
+/* ARTWORK SECTION */
+.pic-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+    grid-auto-rows: 150px 150px 150px;
+}
+
+.pic-container .pic1{
+    grid-column: 1 / 2 span;
+    grid-row: 1;
+}
+
+.pic-container div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    cursor: pointer;
+}
+
+.pic-container img:hover{
+    filter: none;
+}
+/* REGISTER FORM */
+.register-header{
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.register{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register fieldset{
+    width: 100%;
+    padding: 35px 5px;
+}
+
+form fieldset input:not(#male,#female,#not,#fiction,#realistic,#battle-royale,#adventure,#mmorpg),select,option{
+    height: 1.7rem;
+    color: black;
+    width: 300px;
+}
+
+form label{
+    font-size: 14px;
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+    margin: auto;
+}
+
+form fieldset span{
+    color: rgb(253, 82, 82);
+    font-style: italic;
+}
+
+form button{
+    margin-top: 3px;
+    padding: 15px 110px;
+    font-size: 16px;
+    text-align: center; 
+    background-color:rgb(253, 82, 82);
+    color: whitesmoke;
+    font-style: oblique;
+    border-radius: 5%;
+}
+
+form button:hover{
+    color: black;
+    background-color: rgb(61, 201, 177);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span{
+    color: rgb(187, 0, 0);
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* MEDIA QUERY */
+@media only screen and (min-width: 768px){
+    header .signin-up a{
+        display: block;
+    }
+
+    .hero h1{
+        font-size: 50px;
+    }
+
+    figure{
+        width: 500px;
+        height: 400px;
+        overflow: hidden;
+    }
+    
+    figure img{
+        margin: auto;
+        width: 400px;
+        height: 240px;
+        margin-top: 25px;
+        transition: width 0.5s, height 0.5s;
+    }
+
+    figure figcaption{
+        width: 400px;
+    }
+
+    figure:hover {
+        height: 600px;
+    }
+
+    .yt-vid iframe{
+        aspect-ratio: 16/9;
+        width: 60vw;
+    }
+    
+    .register fieldset{
+        width: 500px;
+        padding: 25px 25px;
+    }
+
+    form fieldset input:not(#male,#female,#not,#fiction,#realistic,#battle-royale,#adventure,#mmorpg),select,option{
+        height: 1.7rem;
+        color: black;
+        width: 400px;
+    }
+
+    .register button{
+        margin: 25px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    header nav{
+        display: block;
+    }
+
+    header nav ul{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    header nav ul a:hover{
+        background-color: red;
+        padding: 16px;
+    }
+
+    header button{
+        display: none;
+    }
+
+    .hero h1{
+        font-size: 50px;
+    }
+
+    figure:hover {
+        width: 450px;
+        height: 337.5px;
+    
+    }
+
+    .pic-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        grid-auto-rows: 300px 300px 300px;
+    }
+
+    .pic-container .pic1{
+        grid-column: 2 / 3 span;
+        grid-row: 1 span;
+    }
+
+    .pic-container .pic3{
+        grid-column: 2 / 3 span;
+        grid-row: 3;
+    }
+
+    .pic-container .pic5{
+        grid-column: 1;
+        grid-row: 1/3 span;
+    }
+}
+
+/* ANIMATION */
+
+@keyframes fade-in-out {
+    0% {opacity: 0;}
+    15% {
+        opacity: 1;
+        color: rgb(255, 67, 102)
+    }
+    30%{ opacity: 0;}
+    45% {
+        opacity: 1;
+        color: rgb(227, 255, 41)
+    }
+    60% {opacity: 0;}
+    85% {
+        opacity: 1;
+        color: rgb(48, 134, 255)
+    }
+    100% {opacity: 0;}
 }
