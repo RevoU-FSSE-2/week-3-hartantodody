@@ -10,12 +10,12 @@
 
 @font-face {
     font-family: neon-retro;
-    src: url(/week-3-hartantodody/font-face/NeonRetroDemoVersionRegular-rgPdx.otf);
+    src: url(/font-face/NeonRetroDemoVersionRegular-rgPdx.otf);
 }
 
 @font-face {
     font-family: one-two;
-    src: url(/week-3-hartantodody/font-face/OnetwohoursRegular-3zElZ.ttf);
+    src: url(/font-face/OnetwohoursRegular-3zElZ.ttf);
 }
 
 html{
@@ -26,7 +26,7 @@ html{
 .content-header{
     width : 100%;
     text-align: center;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/week-3-hartantodody/assets/abstract-background-with-red-lines.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/assets/abstract-background-with-red-lines.jpg);
     background-size: cover;
     background-position: center;    
     font-family: one-two;
