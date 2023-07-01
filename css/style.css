@@ -118,7 +118,7 @@ header nav ul a{
     text-align: center;
     gap: 10px;
     /* background */
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://media.giphy.com/media/j8YiZa4RDxlXE4lwsP/giphy.gif);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/assets/apex-legends-screenshot-season6-cg-11-clean.png.adapt.crop16x9.575p.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
