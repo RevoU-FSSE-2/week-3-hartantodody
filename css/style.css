@@ -122,6 +122,7 @@ header nav ul a{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    object-fit: cover;
 }
 .hero h1{
     width: 55vw;
